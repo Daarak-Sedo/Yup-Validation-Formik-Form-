@@ -74,6 +74,12 @@ const schema = yup.object().shape({
     .email("Invalid email format")
     .required("Email is required"),
 
+ // calendar days validation
+start_date: Yup.date()
+              .nullable()
+              .required('This Field is required)
+              .typeError("Invalid Date Format"),
+
   // XOR
   xorField: yup
     .object()
